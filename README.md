@@ -107,6 +107,7 @@ Today, I focused on enhancing my SQL skills by learning how to apply logic and c
 📂 Files Updated
 
   🔹 day3_case_and_subqueries.sql – Contains all Day 3 queries
+      - case_aggregating.sql - Best case studies for conditional and logical statements (row wise1)
   🔹 README.md – Documented learning for Day 3
 
 
