@@ -56,3 +56,59 @@ Today, I deepened my understanding of SQL by working with grouped data and learn
 
 ### 📂 Files Updated
 - ** day_2
+
+
+
+## 🗓️ Day 3 Learning – Conditional Logic, CASE Statements & Subqueries
+
+Today, I focused on enhancing my SQL skills by learning how to apply logic and conditions inside queries using `CASE`, as well as using subqueries to compare rows with calculated aggregates.
+
+---
+
+### 🔹 Topics Covered
+
+- ✅ `CASE` Statement (row-wise conditions)
+- ✅ Conditional column labeling (High/Medium/Low salary)
+- ✅ Region classification using `IN` inside `CASE`
+- ✅ Subqueries in `WHERE` clause (average salary comparison)
+- ✅ Conditional Aggregation using `COUNT(CASE WHEN ...)`
+- ✅ Gender-wise count grouped by city
+- ✅ Combined filtering using `WHERE`, `CASE`, and `GROUP BY`
+
+---
+
+### 🧠 Key Concepts Practiced
+
+1. **Conditional Labels**
+   ```sql  
+   CASE // query_1
+     WHEN salary >= 70000 THEN 'High'
+     WHEN salary >= 40000 THEN 'Medium'
+     ELSE 'Low'
+   END AS salary_status
+
+  CASE  // query_6
+    WHEN city IN ('Delhi', 'Lucknow', 'Chandigarh') THEN 'North India'
+    ELSE 'Other Region'
+  END AS region
+
+  WHERE salary > (SELECT AVG(salary) FROM employees)  // query_8
+
+  COUNT(CASE WHEN gender = 'M' THEN 1 END) AS male_count,
+  COUNT(CASE WHEN gender = 'F' THEN 1 END) AS female_count  // query_9
+
+
+🧪 Practice Done On
+
+  🗃️ Table: employees (custom dataset)
+  📌 Focused on: logic-based grouping, filtering, and labeling
+
+
+📂 Files Updated
+
+  🔹 day3_case_and_subqueries.sql – Contains all Day 3 queries
+  🔹 README.md – Documented learning for Day 3
+
+
+
+
